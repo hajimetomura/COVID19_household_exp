@@ -83,7 +83,7 @@ print(temp_p)
 
 # Define labels for the plot.
 temp_ylab =""
-temp_x_lab <- "Dates"
+temp_xlab <- "Dates"
 temp_main_label <- expression(D[paste("AH,t")])
 
 
