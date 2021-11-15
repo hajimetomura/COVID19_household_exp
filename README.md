@@ -10,5 +10,3 @@ In the code branch:
   "COVID_def_func.r": Load user-defined functions (a source file).
 
   "data.zip": the folder for data files with Japanese characters in csv formats.
-
-In the data branch, csv files for the dependent variable, the explanatory variables, and the Delta-variant and vaccinations data without Japanese characters. See readme.txt in the branch for more details.
