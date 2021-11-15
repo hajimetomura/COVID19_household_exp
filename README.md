@@ -1,4 +1,4 @@
-# COVID19_household_exp
+# COVID19_household_exp (Code branch)
 
 In the code branch:
   "COVID_estimation.r": Estimate the regression model in a stan file, and save the estimation result in a .data format.
