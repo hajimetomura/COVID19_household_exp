@@ -676,6 +676,7 @@ for (j in 1:4){
       temp_p <-  temp_p + scale_x_date(date_breaks = "2 months", date_labels = "%b%d\n%Y")
       
       # Add shadows to indicate the periods of states of emergency.
+      temp_p <- temp_p + annotate("rect",xmin=as.Date("2021-02-02"),xmax=as.Date(Dates_SE_list[4]),ymin=-Inf,ymax=Inf, alpha=.1,fill="blue")
       temp_p <- temp_p + annotate("rect",xmin=as.Date(Dates_SE_list[5]),xmax=as.Date(Dates_SE_list[6]),ymin=-Inf,ymax=Inf, alpha=.1,fill="blue")
       temp_p <- temp_p + annotate("rect",xmin=as.Date(Dates_SE_list[7]),xmax=as.Date(Dates_SE_list[8]),ymin=-Inf,ymax=Inf, alpha=.1,fill="blue")
       
