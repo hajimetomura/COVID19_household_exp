@@ -88,7 +88,7 @@ temp_main_label <- expression(D[paste("AH,t")])
 
 
 # Define a tibble for plotting.
-temp_df <- tibble(Dates = as.Date(weath_date[1:length(ind_abs_hum_var_ave)]), value = 1 - ind_abs_hum_var_ave)
+temp_df <- tibble(Dates = as.Date(weath_date_all), value = W_abs_hum_all)
 
 # Plot data.
 temp_p <- ggplot(temp_df,aes(x=Dates,y=value))+
