@@ -280,7 +280,7 @@ date_label_fcst <- seq(as.Date("2020-03-01"),as.Date(weath_end_date_allsmpl)+1,b
 # Set labels for the plot.
 # The dependent variable is the rate of change in the number of new cases from 7 days ago.
 
-temp_ylab <- "Log difference of the number of new confirmed cases over 7 days" 
+temp_ylab <- "Log difference over 7 days in the number of new confirmed cases" 
 temp_xlab <- "Dates"
 
 # Plot the out-of-sample forecasts of the dependent variable with fitted values with and without time dummies.
