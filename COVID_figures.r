@@ -704,15 +704,15 @@ for (j in 1:4){
 
 # Define labels for each plot.
 temp_xlab <- "Dates"
-temp_ylab <- "100 yen in the 2020 average price per household"
+temp_ylab <- "100 yen in the 2020 average price"
 
 # Plot the level and the moving average.
 for (k in 1:2){
   
   if (k==1){
-    temp_main_label ="Comparison of household expenditures for 2019-2021"
+    temp_main_label ="Comparison of household expenditures per household for 2019-21"
   }else{
-    temp_main_label ="Comparison of household expenditures for 2019-2021 (7-day mov. ave.)"
+    temp_main_label ="Comparison of household expenditures per household for 2019-21 (7-day mov. ave.)"
   }
   
   # Initialize a tibble to contain data for a plot.
@@ -827,12 +827,12 @@ for (j in 1:3){
     # Define labels for each plot.
     temp_xlab <- "Dates"
     if (j == 1){
-      temp_ylab <- "100 yen in the 2020 average price per household"
+      temp_ylab <- "100 yen in the 2020 average price"
     }else{
-      temp_ylab <- "100 yen in the current price per household"
+      temp_ylab <- "100 yen in the current price"
     }
     
-    temp_main_label ="Classified components of household expenditures"
+    temp_main_label ="Classified components of household expenditures per household"
     
     
     # Exclude constant and time dummies, absolute humidity dummy, and mobility in public transportation from the name label.
