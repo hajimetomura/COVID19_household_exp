@@ -386,7 +386,7 @@ sink()
 
 # Plot each component of the decomposition, including both effects via no coefficient dummies and the coefficient dummies of absolute humidity, in one diagram.
 # Define the name of each component of decomposition.
-lgnd <- c("Eating out for meals", "Eating out for soft drink, confectionery, and fruits", "Eating out for alcoholic drink", "Non-packaged lodging", "Domestic travel packages", "Clothing and footwear", "Admissions, viewing, game fees")
+lgnd <- c("Meals at bars and restaurants", "Soft drink, confectionery, and fruits at bars and restaurants", "Alcoholic drink at bars and restaurants", "Non-packaged lodging", "Domestic travel packages", "Clothing and footwear", "Admissions, viewing, game fees")
 lgnd <- c(lgnd, "The other household consumption expenditures") 
 
 lgnd <- c(lgnd, "Mobility in public transportation", "Absolute humidity", "Constant term + Time dummies") 
@@ -910,7 +910,7 @@ temp_main_label ="CPI"
 
 
 # Define the list of the Japanese names of CPI_items.
-CPI_name_list <- c("Eating out in general", "Lodging", "Admissions, viewing, game fees", "Clothing and footwear")
+CPI_name_list <- c("Food consumption at bars and restaurants in general", "Lodging", "Admissions, viewing, game fees", "Clothing and footwear")
 
 CPI_name_list <- c(CPI_name_list, "The other household consumption expenditures")
 
@@ -1098,7 +1098,7 @@ write_csv(temp,"depvar_number_of_new_confirmed_cases.csv")
 # Initialize a tibble to contain large categories of nominal household expenditures.
 temp <- tibble(Dates=seq(as.Date("2020-01-01"), as.Date(paste0(hes_end_all[1],"-",hes_end_all[2],"-",ndays_normal[hes_end_all[2]])), by="day"))
 
-for (i in 1:(length(hes_large_nm)-1)){ # The last item of hes_large_nm is eating out for alcoholic drink.
+for (i in 1:(length(hes_large_nm)-1)){ # The last item of hes_large_nm is alcoholic drink at bars and restaurants.
   # Extract each large category of household expenditures.
   eval(parse(text=paste0("temp <- temp %>% mutate(\'",hes_large_nm_ENG[i],"\'=hes_var2_all[min(which(hes_var_nm2[,1]==hes_large_nm[i])),])")))
 }
