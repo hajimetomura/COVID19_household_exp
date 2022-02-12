@@ -22,7 +22,7 @@ expvar_CPI.csv: This file contains the consumer price indices used to convert no
 expvar_mobility_in_public_transportation.csv: This file contains transit_stations for Japan (nationwide) in the COVID-19 Community Mobility Reports published by Google. The unit: percent. The data frequency: daily. Available from: https://www.google.com/covid19/mobility/.
   
 
-expvar_nationwide_ave_of_absolute_humidity.csv: This file contains the population-weighted average of absolute humidity at the capitals of prefectures. The unit: g/m^3. The data frequency: daily. The source: the author's calculation.
+expvar_nationwide_ave_of_weather_data.csv: This file contains the population-weighted average of absolute humidity and outside temperature at the capitals of prefectures. The unit: g/m^3 and Celsius degree. The data frequency: daily. The source: the author's calculation.
 
 
 weather_in_each_prefecure.csv: This file contains relative temperature, relative humidity, absolute humidity at the capital of each prefecture in Japan. The unit: Celsius degree (temperature); percent (relative humidity); g/m^3 (absolute humidity). The data frequency: daily. The sources: the Japan Meteorological Agency, the Government of Japan. Available from https://www.data.jma.go.jp/gmd/risk/obsdl/index.php; and the author's calculation.
@@ -37,7 +37,10 @@ sample_distribution_of_incubation_periods.csv: This file contains the samples of
 
 3. Other data.
 
-L452R_share_of_new_confirmed_cases.csv: This file contains the L452R share of new confirmed cases in Japan. The unit: percent. The source: the Ministry of Health, Labor, and Welfare, the Government of Japan. Available from: https://covid19.mhlw.go.jp/en/.
+L452R_share_of_new_confirmed_cases.csv: This file contains the L452R share of new confirmed cases in Japan. The unit: percent. The source: the Ministry of Health, Labor, and Welfare, the Government of Japan. The link to the online source dissappeared from the website: https://www.mhlw.go.jp/stf/covid-19/kokunainohasseijoukyou.html.
 
+L452R_share_of_new_confirmed_cases_in_Tokyo.csv: This file contains the L452R share of new confirmed cases in Tokyo. The unit: percent. The source: the Tokyo Metropolitan government. Available from: https://www.bousai.metro.tokyo.lg.jp/taisaku/saigai/1010035/index.html.
 
 Twice_vaccinated_share.csv: This file contains the twice vaccinated share of the population in Japan. The unit: percent. The source: the Ministry of Health, Labor, and Welfare, the Government of Japan. Available from: https://covid19.mhlw.go.jp/en/.
+
+online_share_of_household_expenditures.csv:  This file contains the online share of household expenditures per household and that of household expenditures for clothing and footwear per household in Japan. The unit: 100 yen in the current price. The source: the Statistics Bureau, the Ministry of Internal Affairs and Communications, the Government of Japan. Available from: https://www.stat.go.jp/english/data/joukyou/index.html.
