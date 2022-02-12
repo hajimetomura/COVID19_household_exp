@@ -11,3 +11,7 @@ In the code branch:
   "COVID_def_func.r": Load user-defined functions (a source file).
 
   "data.zip": the folder for data files with Japanese characters in csv formats.
+  
+  "COVID_regress_model7.stan": This code is a stan file for the regression when a weather variable is included in the explanatory variables.
+
+  "COVID_regress_model8.stan": This code is a stan file for the regression when a weather variable is not included in the explanatory variables.
