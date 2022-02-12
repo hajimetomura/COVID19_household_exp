@@ -126,8 +126,8 @@ if (flag_pref_wgt == 1){
 # Define file names.
 thm <- "COVID_regress_model"
 mdl_nm <- eval(parse(text=paste0("\"",thm,mdl_number,".stan\""))) # Name of the model to estimate.
-file_summary_nm <- eval(parse(text=paste0("\"",thm,mdl_number,"_weathertype",log_abs_hum,"_exconlinecloth",exc_online_cloth,"_fit-summary_",incub_sfx,"_",nominal_sfx,"_",weath_sfx,"_",hes_end[1],"-",hes_end[2],".csv\""))) # Name of the file for the summary of estimates.
-file_mcmc_nm <- eval(parse(text=paste0("\"",thm,mdl_number,"_weathertype",log_abs_hum,"_exconlinecloth",exc_online_cloth,"_mcmc_",incub_sfx,"_",nominal_sfx,"_",weath_sfx,"_",hes_end[1],"-",hes_end[2],".data\""))) # Name of the file for the mcmc samples.
+file_summary_nm <- eval(parse(text=paste0("\"COVID_weathertype_",log_abs_hum,"_exconlinecloth_",exc_online_cloth,"_fit-summary_",incub_sfx,"_",nominal_sfx,"_",weath_sfx,"_",hes_end[1],"-",hes_end[2],".csv\""))) # Name of the file for the summary of estimates.
+file_mcmc_nm <- eval(parse(text=paste0("\"COVID_weathertype_",log_abs_hum,"_exconlinecloth_",exc_online_cloth,"_mcmc_",incub_sfx,"_",nominal_sfx,"_",weath_sfx,"_",hes_end[1],"-",hes_end[2],".data\""))) # Name of the file for the mcmc samples.
 
 # Run a stan model.
 # Use cmdstan for estimation.
@@ -158,7 +158,7 @@ write.csv(data.frame(summary(fit)$summary),file=file_summary_nm)
 
 ########## Write a table of the parameter estimates in a tex file. #####################
 
-sink(paste0("para_estim_model",mdl_number,"_weathertype",log_abs_hum,"_exconlinecloth",exc_online_cloth,"_",incub_sfx,"_","_",hes_end[1],"-",hes_end[2],".txt"))
+sink(paste0("para_estim_weathertype_",log_abs_hum,"_exconlinecloth",exc_online_cloth,"_",incub_sfx,"_",nominal_sfx,"_",weath_sfx,"_",hes_end[1],"-",hes_end[2],".txt"))
 # Define the variable names in the model, which are the same order as in the stan file except six R_err_0 before parameters contained in conv_para_vn2.
 if (mdl_number==7){
   # Some weather data among the regressors.

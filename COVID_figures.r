@@ -57,6 +57,7 @@ source("./COVID_data_upload.R",encoding="utf-8") # Load data from csv files.
 
 ########## Load estimates of a linear regression model ################
 
+
 if (log_dist_incub == 1){
   incub_sfx <- "estCHN" # Based on Stephen A et al. (2020).
 }else{
@@ -78,8 +79,7 @@ if (flag_pref_wgt == 1){
 
 
 # Define file names.
-thm <- "COVID_regress_model"
-file_mcmc_nm <- eval(parse(text=paste0("\"",thm,mdl_number,"_weathertype",log_abs_hum,"_exconlinecloth",exc_online_cloth,"_mcmc_",incub_sfx,"_",nominal_sfx,"_",weath_sfx,"_",hes_end[1],"-",hes_end[2],".data\""))) # Name of the file for the mcmc samples.
+file_mcmc_nm <- eval(parse(text=paste0("\"COVID_weathertype_",log_abs_hum,"_exconlinecloth_",exc_online_cloth,"_mcmc_",incub_sfx,"_",nominal_sfx,"_",weath_sfx,"_",hes_end[1],"-",hes_end[2],".data\""))) # Name of the file for the mcmc samples.
 
 # Load data and estimates of a linear regression model of the reproduction number. The mcmc samples are stored in the S4 object named "fit".
 load(file=file_mcmc_nm)
@@ -530,7 +530,7 @@ if (hes_end[1]+(hes_end[2]-1)/12 < hes_end_all[1]+(hes_end_all[2]-1)/12){
   R2_fcst <- 1 - sum(temp^2) / sum((DEP[length(Fitted_R_pm)+1:length(temp)] - mean(DEP[length(Fitted_R_pm)+1:length(temp)]))^2)
   
   # Record R^2 for the prediction period.
-  sink(paste0("R2_pred_Covid_regress_model",mdl_number,"_weathertype",log_abs_hum,"_exconlinecloth",exc_online_cloth,"_dummyfor2ndSE",fcst_td,"_upto_June2021.txt"))
+  sink(paste0("R2_upto_June2021_weathertype_",log_abs_hum,"_exconlinecloth_",exc_online_cloth,"_dummyfor2ndSE_",fcst_td,".txt"))
   print(paste0("RMSE: ", RMSE_fcst))
   print(paste0("R2: ", R2_fcst))  
   sink()
@@ -1378,7 +1378,7 @@ for (i in 1:2){
   fcst_err_lm <- lm(fcst_err[1:length(L452R_reg)] ~ -1 + I(vccn_scnd_share[-7 + ndays_normal[1] + 1 + 1:length(L452R_reg)]*100) + L452R_reg)
   
   # Print the summary of the regression.
-  temp_fn <- file(paste0("COVID_frcst_err_weathertype",log_abs_hum,"_exconlinecloth",exc_online_cloth,"_dummyfor2ndSE",fcst_td,"_ENG_",as.logical(ENG),"_",i,".txt"), open="w", encoding="UTF-8")
+  temp_fn <- file(paste0("COVID_frcst_err_weathertype_",log_abs_hum,"_exconlinecloth_",exc_online_cloth,"_dummyfor2ndSE_",fcst_td,"_ENG_",as.logical(ENG),"_",i,".txt"), open="w", encoding="UTF-8")
   sink(temp_fn)
   print(summary(fcst_err_lm)) # Print the regression result into a text file.
   sink()
