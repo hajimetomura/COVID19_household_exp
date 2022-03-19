@@ -547,7 +547,7 @@ if (hes_end[1]+(hes_end[2]-1)/12 < hes_end_all[1]+(hes_end_all[2]-1)/12){
 # Plot each component of the decomposition, including both effects via no coefficient dummies and the coefficient dummies of absolute humidity, in one diagram.
 # Define the name of each component of decomposition.
 if (ENG==1){
-  lgnd <- c("Meals at bars and restaurants", "Soft drink, confectionery, and fruits at bars and restaurants", "Alcoholic drink at bars and restaurants", "Non-packaged lodging", "Domestic travel packages", "Clothing and footwear", "Admissions, viewing, game fees")
+  lgnd <- c("Meals at bars and restaurants", "Soft drinks, confectioneries, and fruits at bars and restaurants", "Alcoholic drinks at bars and restaurants", "Non-packaged lodging", "Domestic travel packages", "Clothing and footwear", "Admissions, viewing, game fees")
 }else{
   lgnd <- c("食事代", "喫茶代", "飲酒代", "宿泊料", "国内パック旅行費", "被服及び履物", "入場・観覧・ゲーム代")
 }
@@ -773,7 +773,7 @@ for (j in 1:4){
       # Set labels for explanatory variables that correspond to variables in the tibble.
       temp_lgnd_select <- lgnd
       if (i == 1 && j %in% c(1,2)){
-        temp_lgnd_select[length(temp_lgnd_select)] <- "Constant term" # No time dummies for j = 1 and j = 2.
+        temp_lgnd_select[length(temp_lgnd_select)] <- "Constant term + The year-end and new-year holiday dummy" # No SE dummies for j = 1 and j = 2.
       }
       
       if (j == 4){
